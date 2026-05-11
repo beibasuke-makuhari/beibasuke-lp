@@ -22,6 +22,8 @@
 
 # misc
 .DS_Store
+Thumbs.db
+Desktop.ini
 *.pem
 
 # debug
@@ -31,7 +33,9 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
+.env
+.env.*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +43,35 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE / editor state
+.vscode/
+.idea/
+.cursor/
+.zed/
+*.swp
+*.swo
+
+# tool caches
+.eslintcache
+.turbo/
+.cache/
+
+# secrets and credentials (defense-in-depth — .env* covers most, these catch the rest)
+*.key
+*.crt
+*.p12
+*.pfx
+secrets.*
+credentials.*
+gha-creds-*.json
+service-account-*.json
+
+# archives shouldn't be in source
+*.tgz
+*.tar
+*.tar.gz
+*.zip
+
+# local Claude project state
+.claude/
